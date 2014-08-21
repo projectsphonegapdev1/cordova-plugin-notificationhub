@@ -37,14 +37,6 @@ public class NotificationHub extends CordovaPlugin {
 					//2 for NotificatonHub_onNotificationReceivedGlobal
 					String userId = args.getString(3);
                     String senderId = args.getString(4);
-
-					/*JSONObject registrationResult = new JSONObject();
-					registrationResult.put("senderId", senderId);
-					registrationResult.put("userId", userId);
-					PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, registrationResult);
-					pluginResult.setKeepCallback(true);
-					NotificationHub.getCallbackContext().sendPluginResult(pluginResult);*/
-
                     registerApplication(hubName, connectionString, senderId,userId);
                     return true;
             }
